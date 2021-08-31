@@ -38,7 +38,7 @@ models:
           materialized: view
 
 seeds:
-  +quote_columns: true
+  +quote_columns: false
   dbt_jobs:
     raw_job_descriptions:
       +column_types:
