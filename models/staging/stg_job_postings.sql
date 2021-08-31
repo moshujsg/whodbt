@@ -7,5 +7,5 @@ select
     location,
     job_function,
     industries,
-    seniority::varchar(100)
+    seniority::varchar(100) as seniority
 from {{ ref('raw_job_postings') }}
