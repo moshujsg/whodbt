@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: SNOWFLAKE_STATS
+    database: demo_db1
+    schema: SNOWFLAKE_STATS
+    tables:
+      - name: warehouse_metering_history
+      - name: QUERY_HISTORY
+      - name: STORAGE_USAGE
+      - name: PIPE_USAGE_HISTORY
+    

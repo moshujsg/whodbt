@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_company_data
+    columns:
+      - name: name
+        tests:
+          - not_null 
+          - dbt_expectations.expect_column_values_to_not_be_null
+          - unique
+      - name: staff_count
+        tests:    
+          - dbt_expectations.expect_column_min_to_be_between:
+              min_value: 0 # (Optional)

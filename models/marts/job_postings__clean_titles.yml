@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: job_postings__clean_titles
+    columns:
+      - name: seniority
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Experienced', 'Manager', 'Executive', 'Entry-Level']

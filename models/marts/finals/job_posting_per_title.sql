@@ -6,8 +6,8 @@ with job_postings__clean_titles as (
 
 select
 seniority,
-count(cleaned_title)
-from {{ ref('job_postings__clean_titles') }} jp
+count(cleaned_title) as amount
+from job_postings__clean_titles jp
 left join {{ref('stg_company_data')}} cd
     on cd.name = jp.company
 group by seniority
